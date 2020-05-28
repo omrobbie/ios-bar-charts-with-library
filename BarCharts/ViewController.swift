@@ -49,14 +49,23 @@ class ViewController: UIViewController {
     }
 
     func laodData() {
-        var barDataEntry: [BarChartDataEntry] = []
+        let barWidth = 0.1
+        var barDataCases: [BarChartDataEntry] = []
+        var barDataDeaths: [BarChartDataEntry] = []
+        var barDataRecovered: [BarChartDataEntry] = []
 
         for i in 0..<dataDates.count {
-            barDataEntry.append(BarChartDataEntry(x: Double(i), y: Double.random(in: 100..<1000)))
+            barDataCases.append(BarChartDataEntry(x: Double(i) - (barWidth + 0.1), y: Double.random(in: 100..<1000)))
+            barDataDeaths.append(BarChartDataEntry(x: Double(i), y: Double.random(in: 100..<1000)))
+            barDataRecovered.append(BarChartDataEntry(x: Double(i) + (barWidth + 0.1), y: Double.random(in: 100..<1000)))
         }
 
-        let barSet = BarChartDataSet(entries: barDataEntry, label: "Data")
-        let barData = BarChartData(dataSets: [barSet])
+        let barSetCases = BarChartDataSet(entries: barDataCases, label: "Caess")
+        let barSetDeaths = BarChartDataSet(entries: barDataDeaths, label: "Deaths")
+        let barSetRecovered = BarChartDataSet(entries: barDataRecovered, label: "Recovered")
+
+        let barData = BarChartData(dataSets: [barSetCases, barSetDeaths, barSetRecovered])
+        barData.barWidth = barWidth
         barChartView.data = barData
     }
 
