@@ -14,13 +14,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Charts Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZG-xR-fny">
+                                <rect key="frame" x="20" y="44" width="374" height="44"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Covid-19 Study Case" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l9-AA-fGE">
+                                <rect key="frame" x="20" y="96" width="374" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hb9-z9-Keo">
+                                <rect key="frame" x="20" y="184" width="374" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="bfe-5A-xjs"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVy-4v-ctj">
+                                <rect key="frame" x="20" y="454" width="374" height="48"/>
+                                <color key="backgroundColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="ATA-d3-jfU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Load Random Data">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UZG-xR-fny" secondAttribute="trailing" constant="20" id="981-1D-vWq"/>
+                            <constraint firstItem="UZG-xR-fny" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EpO-Nd-uNL"/>
+                            <constraint firstItem="3l9-AA-fGE" firstAttribute="top" secondItem="UZG-xR-fny" secondAttribute="bottom" constant="8" id="TTm-iq-a9X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hb9-z9-Keo" secondAttribute="trailing" constant="20" id="VRC-Pr-gNI"/>
+                            <constraint firstItem="Hb9-z9-Keo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vgc-Rq-4OI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jVy-4v-ctj" secondAttribute="trailing" constant="20" id="Zay-AX-cm6"/>
+                            <constraint firstItem="jVy-4v-ctj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aeN-sL-CFf"/>
+                            <constraint firstItem="3l9-AA-fGE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bBo-4G-Y12"/>
+                            <constraint firstItem="jVy-4v-ctj" firstAttribute="top" secondItem="Hb9-z9-Keo" secondAttribute="bottom" constant="20" id="di2-Aq-Ty5"/>
+                            <constraint firstItem="UZG-xR-fny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g9R-mk-AMC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3l9-AA-fGE" secondAttribute="trailing" constant="20" id="gFF-Ro-AL7"/>
+                            <constraint firstItem="Hb9-z9-Keo" firstAttribute="top" secondItem="3l9-AA-fGE" secondAttribute="bottom" constant="64" id="iRS-as-hBj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="131"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="130.58035714285714"/>
         </scene>
     </scenes>
 </document>
