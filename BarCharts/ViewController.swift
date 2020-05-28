@@ -61,12 +61,19 @@ class ViewController: UIViewController {
         }
 
         let barSetCases = BarChartDataSet(entries: barDataCases, label: "Caess")
+        barSetCases.setColor(.systemOrange)
+
         let barSetDeaths = BarChartDataSet(entries: barDataDeaths, label: "Deaths")
+        barSetDeaths.setColor(.systemRed)
+
         let barSetRecovered = BarChartDataSet(entries: barDataRecovered, label: "Recovered")
+        barSetRecovered.setColor(.systemGreen)
 
         let barData = BarChartData(dataSets: [barSetCases, barSetDeaths, barSetRecovered])
         barData.barWidth = barWidth
+
         barChartView.data = barData
+        barChartView.fitScreen()
     }
 
     @IBAction func btnLoadDataTapped(_ sender: Any) {
