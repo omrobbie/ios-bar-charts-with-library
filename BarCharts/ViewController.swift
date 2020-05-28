@@ -7,10 +7,45 @@
 //
 
 import UIKit
+import Charts
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var barChartView: BarChartView!
+
+    let dataDates: [String] = [
+        "5/20/20",
+        "5/21/20",
+        "5/22/20",
+        "5/23/20",
+        "5/24/20",
+        "5/25/20",
+        "5/26/20",
+        "5/27/20",
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBarChartView()
+    }
+
+    func setupBarChartView() {
+        barChartView.backgroundColor = .systemGray6
+    }
+
+    func laodData() {
+        var barDataEntry: [BarChartDataEntry] = []
+
+        for i in 0..<dataDates.count {
+            barDataEntry.append(BarChartDataEntry(x: Double(i), y: Double.random(in: 100..<1000)))
+        }
+
+        let barSet = BarChartDataSet(entries: barDataEntry, label: "Data")
+        let barData = BarChartData(dataSets: [barSet])
+        barChartView.data = barData
+    }
+
+    @IBAction func btnLoadDataTapped(_ sender: Any) {
+        laodData()
     }
 }
