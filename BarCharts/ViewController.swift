@@ -9,6 +9,19 @@
 import UIKit
 import Charts
 
+class XAxisValueFormatter: IAxisValueFormatter {
+
+    let dataDates: [String]
+
+    init(datadates: [String]) {
+        self.dataDates = datadates
+    }
+
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        return dataDates[Int(value)]
+    }
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var barChartView: BarChartView!
@@ -21,7 +34,6 @@ class ViewController: UIViewController {
         "5/24/20",
         "5/25/20",
         "5/26/20",
-        "5/27/20",
     ]
 
     override func viewDidLoad() {
@@ -31,6 +43,9 @@ class ViewController: UIViewController {
 
     func setupBarChartView() {
         barChartView.backgroundColor = .systemGray6
+        barChartView.rightAxis.enabled = false
+        barChartView.xAxis.labelPosition = .bottom
+        barChartView.xAxis.valueFormatter = XAxisValueFormatter(datadates: dataDates)
     }
 
     func laodData() {
