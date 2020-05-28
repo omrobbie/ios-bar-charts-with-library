@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		FCBB37FE247F97080004AB43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBB37FC247F97080004AB43 /* Main.storyboard */; };
 		FCBB3800247F97090004AB43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBB37FF247F97090004AB43 /* Assets.xcassets */; };
 		FCBB3803247F97090004AB43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBB3801247F97090004AB43 /* LaunchScreen.storyboard */; };
+		FCBB380B247FA2050004AB43 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBB380A247FA2050004AB43 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FCBB37FF247F97090004AB43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCBB3802247F97090004AB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCBB3804247F97090004AB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCBB380A247FA2050004AB43 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				FCBB37F6247F97080004AB43 /* AppDelegate.swift */,
 				FCBB37F8247F97080004AB43 /* SceneDelegate.swift */,
 				FCBB37FA247F97080004AB43 /* ViewController.swift */,
+				FCBB380A247FA2050004AB43 /* DateFormatter.swift */,
 				FCBB37FC247F97080004AB43 /* Main.storyboard */,
 				FCBB37FF247F97090004AB43 /* Assets.xcassets */,
 				FCBB3801247F97090004AB43 /* LaunchScreen.storyboard */,
@@ -88,7 +91,6 @@
 				B2605F4FB08DE7F6432EB12F /* Pods-BarCharts.debug.xcconfig */,
 				E22822F43FD86A9FD06F6F08 /* Pods-BarCharts.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBB380B247FA2050004AB43 /* DateFormatter.swift in Sources */,
 				FCBB37FB247F97080004AB43 /* ViewController.swift in Sources */,
 				FCBB37F7247F97080004AB43 /* AppDelegate.swift in Sources */,
 				FCBB37F9247F97080004AB43 /* SceneDelegate.swift in Sources */,

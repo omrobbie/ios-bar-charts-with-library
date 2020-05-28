@@ -18,7 +18,7 @@ class XAxisValueFormatter: IAxisValueFormatter {
     }
 
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        return dataDates[Int(value)]
+        return dataDates[Int(value)].toDateString()
     }
 }
 
